@@ -1,12 +1,14 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
 
 import HeaderInterno from './HeaderInterno'
+import Categoria from './Categoria'
 
 const Categorias = (props) => {
     return (
         <div>
             <HeaderInterno />
+            <Router>
             <div className='container' style={{ paddingTop: '120px' }} >
                 <h1>Categorias</h1>
                 <div className='row'>
@@ -24,10 +26,11 @@ const Categorias = (props) => {
                         </ul>
                     </div>
                     <div className='col-lg-8'>
-                        conteudo
+                        <Route path='/categorias/:urlCategoria' component={Categoria} />
                     </div>
                 </div>
             </div>
+            </Router>
         </div>
     )
 }
