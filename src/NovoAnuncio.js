@@ -23,7 +23,6 @@ class NovoAnuncio extends Component{
                     nome: this.nome.value,
                     descricao: this.descricao.value,
                     preco: this.preco.value,
-                    telefone: this.telefone.value,
                     foto: img.metadata.downloadURLs[0],
                     telefone: this.telefone.value,
                     vendedor: this.vendedor.value,
